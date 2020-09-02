@@ -13,4 +13,5 @@
 
 # Start
 python3 main.py (GUI)
+
 python3 insta_unfollow.py (Console)
