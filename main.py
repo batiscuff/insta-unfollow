@@ -111,11 +111,11 @@ class Main(QtWidgets.QMainWindow):
         self.non_follow = self.non_followers(followers, followings)
         self.total_non_followed = len(self.non_follow)
         results = [
-            "=============================",
-            f"Колличество подписчиков: {len(followers)}",
-            f"Колличество подписок: {len(followings)}",
-            f"Колличество неподписаных: {self.total_non_followed}",
-            "=============================\n",
+            "=======================",
+            f"Кол-во подписчиков: {len(followers)}",
+            f"Кол-во подписок: {len(followings)}",
+            f"Кол-во неподписаных: {self.total_non_followed}",
+            "=======================\n",
         ]
         return "\n".join(results)
 
