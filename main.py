@@ -61,9 +61,7 @@ class Ui_MainWindow(object):
         self.plainTextEdit.setObjectName("plainTextEdit")
         self.plainTextEdit.setGeometry(QtCore.QRect(220, 20, 211, 221))
         self.plainTextEdit.setReadOnly(True)
-        self.plainTextEdit.setStyleSheet(
-            "background-color: rgb(186, 189, 182);\n"
-        )
+        self.plainTextEdit.setStyleSheet("background-color: rgb(186, 189, 182);\n")
 
         self.messageBox = QtWidgets.QMessageBox()
         pixmap = QtGui.QPixmap("images/okay.jpg")
@@ -88,8 +86,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Insta Unfollower"))
         self.lineEdit.setPlaceholderText(_translate("MainWindow", "логин"))
-        self.lineEdit_2.setPlaceholderText(_translate(
-                "MainWindow", "пароль"))
+        self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "пароль"))
         self.pushButton.setText(_translate("MainWindow", "Войти"))
         self.plainTextEdit.setPlaceholderText(
             _translate("MainWindow", "                  Результат")
@@ -111,11 +108,11 @@ class Main(QtWidgets.QMainWindow):
         self.non_follow = self.non_followers(followers, followings)
         self.total_non_followed = len(self.non_follow)
         results = [
-            "=============================",
-            f"Колличество подписчиков: {len(followers)}",
-            f"Колличество подписок: {len(followings)}",
-            f"Колличество неподписаных: {self.total_non_followed}",
-            "=============================\n",
+            "=======================",
+            f"Кол-во подписчиков: {len(followers)}",
+            f"Кол-во подписок: {len(followings)}",
+            f"Кол-во неподписаных: {self.total_non_followed}",
+            "=======================\n",
         ]
         return "\n".join(results)
 

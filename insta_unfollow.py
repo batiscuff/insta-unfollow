@@ -25,16 +25,17 @@ class InstagramUnfollowers:
                 if i >= self.total_non_followed:
                     break
                 # Удаляет последнего юзера по никнейму
-                user = list(self.non_follow.keys())[len(self.non_follow) - 1]
+                user = list(non_follow.keys())[len(non_follow) - 1]
                 # Отписывается и удаляет юзера pop() методом
                 self.api.unfollow(non_follow[user])
                 non_follow.pop(user)
+            print("Вы отписались от всех")
 
-    def results(self):
+    def results(self) -> str:
         results = [
-                f"Колличество подписчиков: {len(self.followers)}",
-                f"Колличество подписок: {len(self.followings)}",
-                f"Колличество неподписаных: {self.total_non_followed}"
+            f"Колличество подписчиков: {len(self.followers)}",
+            f"Колличество подписок: {len(self.followings)}",
+            f"Колличество неподписаных: {self.total_non_followed}",
         ]
         return "\n".join(results)
 
@@ -98,4 +99,4 @@ if __name__ == "__main__":
     print("------- Введите ваши данные --------")
     USERNAME = input("Введите ваш логин: ")
     PASSWORD = input("Введите ваш пароль: ")
-    print(InstagramUnfollowers(USERNAME, PASSWORD))
+    InstagramUnfollowers(USERNAME, PASSWORD)
